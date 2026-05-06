@@ -1,0 +1,100 @@
+<svg width="100%" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    .title { animation: glow 2.5s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{opacity:0.85} 50%{opacity:1} }
+    .sub { animation: subpulse 3s ease-in-out infinite 0.5s; }
+    @keyframes subpulse { 0%,100%{opacity:0.5} 50%{opacity:1} }
+    .border { animation: borderglow 2s ease-in-out infinite; }
+    @keyframes borderglow { 0%,100%{opacity:0.3} 50%{opacity:0.9} }
+    .icon { animation: iconFloat 3s ease-in-out infinite; transform-origin: 80px 100px; }
+    @keyframes iconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+    .dot1 { animation: dotblink 1.5s ease-in-out infinite; }
+    .dot2 { animation: dotblink 1.5s ease-in-out infinite 0.5s; }
+    .dot3 { animation: dotblink 1.5s ease-in-out infinite 1s; }
+    @keyframes dotblink { 0%,100%{opacity:0.2} 50%{opacity:1} }
+    .scanline { animation: scan 4s linear infinite; }
+    @keyframes scan { 0%{transform:translateY(-200px)} 100%{transform:translateY(400px)} }
+  </style>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#000000"/>
+    <stop offset="40%" stop-color="#00001a"/>
+    <stop offset="100%" stop-color="#000000"/>
+  </linearGradient>
+  <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#00e5ff"/>
+    <stop offset="100%" stop-color="#ff3366"/>
+  </linearGradient>
+  <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#00e5ff"/>
+    <stop offset="100%" stop-color="#ff3366"/>
+  </linearGradient>
+  <clipPath id="scanClip">
+    <rect width="800" height="200"/>
+  </clipPath>
+</defs>
+
+<!-- Background -->
+<rect width="800" height="200" fill="url(#bgGrad)" rx="10"/>
+
+<!-- Scanline effect -->
+<g clip-path="url(#scanClip)">
+  <rect class="scanline" x="0" y="0" width="800" height="2" fill="#00e5ff" opacity="0.04"/>
+</g>
+
+<!-- Grid lines subtle -->
+<line x1="0" y1="50" x2="800" y2="50" stroke="#00e5ff" stroke-width="0.2" opacity="0.1"/>
+<line x1="0" y1="100" x2="800" y2="100" stroke="#00e5ff" stroke-width="0.2" opacity="0.1"/>
+<line x1="0" y1="150" x2="800" y2="150" stroke="#00e5ff" stroke-width="0.2" opacity="0.1"/>
+<line x1="200" y1="0" x2="200" y2="200" stroke="#00e5ff" stroke-width="0.2" opacity="0.1"/>
+<line x1="400" y1="0" x2="400" y2="200" stroke="#00e5ff" stroke-width="0.2" opacity="0.1"/>
+<line x1="600" y1="0" x2="600" y2="200" stroke="#00e5ff" stroke-width="0.2" opacity="0.1"/>
+
+<!-- Borders -->
+<rect class="border" x="3" y="3" width="794" height="194" rx="9" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+<rect class="border" x="6" y="6" width="788" height="188" rx="7" fill="none" stroke="#ff3366" stroke-width="0.4"/>
+
+<!-- Skull icon (from favicon) -->
+<g class="icon">
+  <circle cx="80" cy="95" r="45" fill="#00001a" stroke="#00e5ff" stroke-width="0.5" opacity="0.5"/>
+  <!-- Skull head -->
+  <ellipse cx="80" cy="88" rx="26" ry="28" fill="#000814" stroke="#00e5ff" stroke-width="1"/>
+  <!-- Eyes -->
+  <ellipse cx="71" cy="85" rx="7" ry="8" fill="#00e5ff" opacity="0.9"/>
+  <ellipse cx="89" cy="85" rx="7" ry="8" fill="#00e5ff" opacity="0.9"/>
+  <ellipse cx="71" cy="85" rx="4" ry="4" fill="#000814"/>
+  <ellipse cx="89" cy="85" rx="4" ry="4" fill="#000814"/>
+  <!-- Nose -->
+  <ellipse cx="80" cy="96" rx="4" ry="3" fill="#000814" stroke="#00e5ff" stroke-width="0.5"/>
+  <!-- Jaw -->
+  <rect x="66" y="103" width="28" height="10" rx="2" fill="#000814" stroke="#00e5ff" stroke-width="0.8"/>
+  <line x1="74" y1="103" x2="74" y2="113" stroke="#00e5ff" stroke-width="0.5" opacity="0.6"/>
+  <line x1="80" y1="103" x2="80" y2="113" stroke="#00e5ff" stroke-width="0.5" opacity="0.6"/>
+  <line x1="86" y1="103" x2="86" y2="113" stroke="#00e5ff" stroke-width="0.5" opacity="0.6"/>
+  <!-- Glow -->
+  <ellipse cx="80" cy="90" rx="28" ry="30" fill="none" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
+</g>
+
+<!-- Vertical separator -->
+<line x1="145" y1="30" x2="145" y2="170" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
+
+<!-- Main title -->
+<text class="title" x="470" y="82" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="46" font-weight="900" fill="url(#titleGrad)" letter-spacing="10">SKULL AUTH</text>
+
+<!-- Subtitle -->
+<text class="sub" x="470" y="112" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" fill="#00e5ff" letter-spacing="3" opacity="0.8">&#x2501;&#x2501;  ELITE LICENSE &amp; AUTHENTICATION SYSTEM  &#x2501;&#x2501;</text>
+
+<!-- Powered by line -->
+<text x="470" y="138" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#ff3366" letter-spacing="2" opacity="0.7">&#x26A1;  POWERED BY SKULL LABS&#x2122;</text>
+
+<!-- Dots indicator -->
+<circle class="dot1" cx="420" cy="158" r="4" fill="#00e5ff"/>
+<circle class="dot2" cx="470" cy="158" r="4" fill="#ff3366"/>
+<circle class="dot3" cx="520" cy="158" r="4" fill="#00e5ff"/>
+
+<!-- Corner accents -->
+<path d="M20 20 L45 20 M20 20 L20 45" stroke="#00e5ff" stroke-width="1.5" fill="none" opacity="0.6"/>
+<path d="M780 20 L755 20 M780 20 L780 45" stroke="#00e5ff" stroke-width="1.5" fill="none" opacity="0.6"/>
+<path d="M20 180 L45 180 M20 180 L20 155" stroke="#ff3366" stroke-width="1.5" fill="none" opacity="0.6"/>
+<path d="M780 180 L755 180 M780 180 L780 155" stroke="#ff3366" stroke-width="1.5" fill="none" opacity="0.6"/>
+</svg>
