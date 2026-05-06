@@ -4,7 +4,8 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,40:0a0a2e,70:00003a,100:000000&height=220&section=header&text=💀%20SKULL%20AUTH&fontSize=65&fontColor=00e5ff&fontAlignY=40&desc=⚡%20Elite%20License%20%26%20Authentication%20System&descAlignY=62&descSize=16&animation=fadeIn&stroke=00e5ff&strokeWidth=1" width="100%"/>
+<!-- Upload skull-auth-banner.svg to your repo root for this to show -->
+<img src="https://raw.githubusercontent.com/skulllabsin/skull-auth/main/skull-auth-banner.svg" width="100%"/>
 
 </div>
 
