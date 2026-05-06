@@ -5,7 +5,7 @@
 <div align="center">
 
 <!-- Upload skull-auth-banner.svg to your repo root for this to show -->
-<img src="https://github.com/skulllabsin/skullauth/blob/main/skeleton.svg" width="100%"/>
+<img src="https://github.com/skulllabsin/skullauth/blob/main/skull-auth-banner.svg" width="100%"/>
 
 </div>
 
